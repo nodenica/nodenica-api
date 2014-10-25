@@ -27,5 +27,9 @@
   "Type": {
     "dataSource": "db",
     "public": true
+  },
+  "Team": {
+    "dataSource": "db",
+    "public": false
   }
 }
