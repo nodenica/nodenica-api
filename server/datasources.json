@@ -1,6 +1,10 @@
 {
   "db": {
     "name": "db",
-    "connector": "memory"
+    "connector": "postgresql",
+    "host": "localhost",
+    "database": "nodenica",
+    "username": "postgres",
+    "password": "NodeRules"
   }
 }
