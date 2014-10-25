@@ -16,5 +16,9 @@
   },
   "optionalDependencies": {
     "loopback-explorer": "^1.1.0"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-loopback-auto": "0.0.4"
   }
 }
