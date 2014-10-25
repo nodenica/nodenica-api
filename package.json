@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "grunt": "^0.4.5",
-    "grunt-loopback-auto": "0.0.4"
+    "grunt-loopback-auto": "0.0.4",
+    "request": "^2.46.0"
   }
 }
