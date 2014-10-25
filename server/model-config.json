@@ -31,5 +31,9 @@
   "Team": {
     "dataSource": "db",
     "public": false
+  },
+  "Article": {
+    "dataSource": "db",
+    "public": true
   }
 }
