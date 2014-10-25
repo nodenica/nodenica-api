@@ -23,6 +23,7 @@
     "deasync": "0.0.7",
     "grunt": "^0.4.5",
     "grunt-loopback-auto": "0.0.4",
+    "randomstring": "^1.0.3",
     "request": "^2.46.0"
   }
 }
