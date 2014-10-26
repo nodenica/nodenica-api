@@ -23,6 +23,8 @@
     "grunt": "^0.4.5",
     "grunt-loopback-auto": "0.0.4",
     "randomstring": "^1.0.3",
-    "request": "^2.46.0"
+    "request": "^2.46.0",
+    "should": "^4.1.0",
+    "should-http": "0.0.2"
   }
 }
