@@ -24,11 +24,11 @@
       "permission": "ALLOW"
     },
     {
-      "accessType": "WRITE",
+      "accessType": "*",
       "principalType": "ROLE",
       "principalId": "admin",
       "permission": "ALLOW",
-      "property": "create"
+      "property": "*"
     }
   ],
   "methods": []
