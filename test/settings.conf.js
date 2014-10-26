@@ -1,3 +1,10 @@
+/**
+ * The accessToken you can see in this file only
+ * work in the development environment to @paulomcnally,
+ * please generate your own accessToken for access to
+ * run your unit tests.
+ */
+
 var randomstring = require('randomstring');
 var request = require('request');
 var deasync = require('deasync');
@@ -86,23 +93,23 @@ var Settings = function() {
   self.auth = {
     adminA: {
       id: 1,
-      accessToken: '9RI0FbwGFOjZDACVAsRGDB56NYGGBjRMNv8974OE5uD21r7woAtoaFI60rUgqHFL'
+      accessToken: '9RI0FbwGFOjZDACVAsRGDB56NYGGBjRMNv8974OE5uD21r7woAtoaFI60rUgqHFL' || process.env.ADMIN_A_ACCESS_TOKEN
     },
     adminB: {
       id: 2,
-      accessToken: 'HtYCxpPr7F0iFZydskybHSDp6v4gtc9TC9HUBoVRQgS3Dsgg7g1qS2F2lduIUdvu'
+      accessToken: 'HtYCxpPr7F0iFZydskybHSDp6v4gtc9TC9HUBoVRQgS3Dsgg7g1qS2F2lduIUdvu' || process.env.ADMIN_B_ACCESS_TOKEN
     },
     adminC: {
       id: 3,
-      accessToken: 'LPuENsmU1FdVZoDjhyAQANwZQoe7PMR1YLKSPLfzxZzuwrveAgZYF4UuzEmqvolz'
+      accessToken: 'LPuENsmU1FdVZoDjhyAQANwZQoe7PMR1YLKSPLfzxZzuwrveAgZYF4UuzEmqvolz' || process.env.ADMIN_C_ACCESS_TOKEN
     },
     foo: {
       id: 4,
-      accessToken: 'W4nqlSCBKszPeO8Al6dSa6YydGq03eF8jBFfHLEwBOMCCMk5sGor0MHHA3E3EZ0i'
+      accessToken: 'W4nqlSCBKszPeO8Al6dSa6YydGq03eF8jBFfHLEwBOMCCMk5sGor0MHHA3E3EZ0i' || process.env.FOO_ACCESS_TOKEN
     },
     bar: {
       id: 5,
-      accessToken: '5jlpGWpSWAnBXDwWJB2rDH1ePzYhmpTg54fFJlcT8OXgMrh4DUCLwkRDmuwEoVPp'
+      accessToken: '5jlpGWpSWAnBXDwWJB2rDH1ePzYhmpTg54fFJlcT8OXgMrh4DUCLwkRDmuwEoVPp' || process.env.BAR_ACCESS_TOKEN
     }
   }
 }
