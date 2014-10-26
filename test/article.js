@@ -15,8 +15,44 @@ describe('Article', function() {
   var articleObj = JSON.parse(article.body);
 
   describe('Create', function() {
-    it('Foo create', function() {
+    it('ALLOW create to Foo', function() {
       article.should.have.status(200);
+    });
+    it('DENY create to Foo | Require title', function() {
+      var form = {
+        'title': '',
+        'content': 'This is a Unit Test',
+        'type_id': 1
+      };
+      var createRequest = settings.http.post('Articles', form, settings.auth.foo.accessToken);
+      createRequest.should.have.status(422);
+    });
+    it('DENY create to Foo | Require content', function() {
+      var form = {
+        'title': 'Unit Test ' + settings.getRandomString(),
+        'content': '',
+        'type_id': 1
+      };
+      var createRequest = settings.http.post('Articles', form, settings.auth.foo.accessToken);
+      createRequest.should.have.status(422);
+    });
+    it('DENY create to Foo | Require type_id', function() {
+      var form = {
+        'title': 'Unit Test ' + settings.getRandomString(),
+        'content': 'This is a Unit Test',
+        'type_id': ''
+      };
+      var createRequest = settings.http.post('Articles', form, settings.auth.foo.accessToken);
+      createRequest.should.have.status(409);
+    });
+    it('DENY create to Foo | Require exists type_id', function() {
+      var form = {
+        'title': 'Unit Test ' + settings.getRandomString(),
+        'content': 'This is a Unit Test',
+        'type_id': 0
+      };
+      var createRequest = settings.http.post('Articles', form, settings.auth.foo.accessToken);
+      createRequest.should.have.status(409);
     });
   });
 
