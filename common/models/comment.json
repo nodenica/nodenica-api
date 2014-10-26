@@ -1,25 +1,17 @@
 {
-  "name": "Article",
-  "plural": "Articles",
+  "name": "Comment",
+  "plural": "Comments",
   "base": "PersistedModel",
   "properties": {
-    "title": {
-      "type": "string",
-      "required": true
-    },
-    "slug": {
-      "type": "string",
-      "required": true
-    },
     "content": {
       "type": "string",
       "required": true
     },
-    "user_id": {
+    "article_id": {
       "type": "number",
       "required": true
     },
-    "type_id": {
+    "user_id": {
       "type": "number",
       "required": true
     },
@@ -37,10 +29,10 @@
       "model": "User",
       "foreignKey": "user_id"
     },
-    "Type": {
+    "Article": {
       "type": "belongsTo",
-      "model": "Type",
-      "foreignKey": "type_id"
+      "model": "Article",
+      "foreignKey": "article_id"
     }
   },
   "acls": [
