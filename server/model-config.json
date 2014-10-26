@@ -35,5 +35,9 @@
   "Article": {
     "dataSource": "db",
     "public": true
+  },
+  "Comment": {
+    "dataSource": "db",
+    "public": true
   }
 }
