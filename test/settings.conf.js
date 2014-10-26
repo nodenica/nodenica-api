@@ -1,6 +1,88 @@
+var randomstring = require('randomstring');
+var request = require('request');
+var deasync = require('deasync');
+var httpPost = deasync(request.post);
+var httpPut = deasync(request.put);
+var httpGet = deasync(request.get);
+var httpDelete = deasync(request.del);
+
 var Settings = function() {
   var self = this;
 
+  /**
+   * Url
+   */
+  self.url = 'http://localhost:3000/api/';
+
+  /**
+   * Make http request post / put / get / delete
+   */
+  self.http = {
+    // post
+    post: function(resource, params, accessToken) {
+      var options = {
+        url: self.getUrl(resource),
+        headers: {
+            'authorization': accessToken
+        }
+      };
+      if (params) {
+        options.form = params;
+      }
+      return httpPost(options);
+    },
+    // put
+    put: function(resource, params, accessToken) {
+      var options = {
+        url: self.getUrl(resource),
+        headers: {
+            'authorization': accessToken
+        }
+      };
+      if (params) {
+        options.form = params;
+      }
+      return httpPut(options);
+    },
+    // get
+    get: function(resource, accessToken) {
+      var options = {
+        url: self.getUrl(resource),
+        headers: {
+            'authorization': accessToken
+        }
+      };
+      return httpGet(options);
+    },
+    // delete
+    delete: function(resource, accessToken) {
+      var options = {
+        url: self.getUrl(resource),
+        headers: {
+            'authorization': accessToken
+        }
+      };
+      return httpDelete(options);
+    }
+  }
+
+  /**
+   * Return a random string
+   */
+  self.getRandomString = function() {
+    return randomstring.generate(6);
+  }
+
+  /**
+   *
+   */
+  self.getUrl = function(resource) {
+    return self.url + resource
+  }
+
+  /**
+   * Auth
+   */
   self.auth = {
     adminA: {
       id: 1,
