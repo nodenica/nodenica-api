@@ -57,6 +57,13 @@
       "permission": "ALLOW"
     },
     {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "__get__User"
+    },
+    {
       "accessType": "WRITE",
       "principalType": "ROLE",
       "principalId": "$authenticated",
