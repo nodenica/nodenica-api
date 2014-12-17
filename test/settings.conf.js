@@ -1,6 +1,6 @@
 /**
- * The accessToken you can see in this file only
- * work in the development environment to @paulomcnally,
+ * The accessToken you can see in this file, only
+ * works in the development environment to @paulomcnally,
  * please generate your own accessToken for access to
  * run your unit tests.
  */
